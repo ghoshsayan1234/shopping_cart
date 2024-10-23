@@ -6,6 +6,8 @@ import ShopCategory from './pages/ShopCategory.jsx';
 import Cart from './pages/Cart.jsx';
 import LoginSignup from './pages/LoginSignup.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import NewCollections from './components/NewCollections/NewCollections.jsx';
+
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/login' element={<LoginSignup/>}/>
       </Routes>
+      <NewCollections></NewCollections>
       </BrowserRouter>
     </div>
   );
