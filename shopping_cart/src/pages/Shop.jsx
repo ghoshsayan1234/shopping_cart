@@ -4,7 +4,8 @@ import Hero from '../components/Hero/Hero'
 const Shop = () => {
   return (
     <div>
-      <Hero />
+      <Hero /> 
+      <h1>Hello</h1>
     </div>
   )
 }
