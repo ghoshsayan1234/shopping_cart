@@ -6,7 +6,10 @@ import ShopCategory from './pages/ShopCategory.jsx';
 import Cart from './pages/Cart.jsx';
 import LoginSignup from './pages/LoginSignup.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import NewCollections from './components/NewCollections/NewCollections.jsx';
+import Footer from './components/Footer/Footer.jsx';
+import men_banner from './components/assets/banner_mens.png';
+import women_banner from './components/assets/banner_women.png';
+import kid_banner from './components/assets/banner_kids.png';
 
 
 function App() {
@@ -16,16 +19,16 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Shop/>}/>
-        <Route path='/mens' element={<ShopCategory category="mens"/>}/>
-        <Route path='/womens' element={<ShopCategory category="womens"/>}/>
-        <Route path='/kids' element={<ShopCategory category="kids"/>}/>
+        <Route path='/mens' element={<ShopCategory banner={men_banner} category="mens"/>}/>
+        <Route path='/womens' element={<ShopCategory banner={women_banner} category="womens"/>}/>
+        <Route path='/kids' element={<ShopCategory banner={kid_banner} category="kids"/>}/>
         <Route path="product" element={<Product />}>
           <Route path=":productId" element={<Product />}/>
         </Route>
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/login' element={<LoginSignup/>}/>
       </Routes>
-      <NewCollections></NewCollections>
+      <Footer />
       </BrowserRouter>
     </div>
   );
