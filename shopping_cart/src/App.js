@@ -10,11 +10,14 @@ import Footer from './components/Footer/Footer.jsx';
 import men_banner from './components/assets/banner_mens.png';
 import women_banner from './components/assets/banner_women.png';
 import kid_banner from './components/assets/banner_kids.png';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
   return (
     <div>
+      <ToastContainer />
       <BrowserRouter>
       <Navbar />
       <Routes>
